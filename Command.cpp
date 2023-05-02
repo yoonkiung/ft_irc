@@ -70,7 +70,6 @@ void	Command::nick()
 				perr("Error: send error");
 			else
 				_client.setInit(true);
-			cout << msg;
 		}
 	}
 	else//이미 생성 이력 있고 NICK바꿀시
@@ -80,7 +79,6 @@ void	Command::nick()
 			msg = makeChangeNickMsg(); //이 함수 내부에서 set이랑 중복검사함
 			if (send(_client.getClntfd(), msg.c_str(), msg.length(), 0) == -1)
 				perr("Error: send error");
-			cout << msg;
 		}
 	}
 }
