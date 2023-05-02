@@ -68,7 +68,7 @@ int main(int ac, char **av)
 						Command cmd = Command(msg, clntList[i - 1], clntList);
 						cmd.execute();
 						// ss.send(msg, clntfd);
-						print_List(clntList);
+						// print_List(clntList);
 						break;
 					}
 				}
